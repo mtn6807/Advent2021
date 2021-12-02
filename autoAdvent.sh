@@ -4,9 +4,8 @@ mkdir $DIR
 cd $DIR
 touch partOne.js
 touch partTwo.js
+touch input.txt
 
-START = "const fs = require('fs');
-const data = fs.readFileSync('./input.txt',{encoding:'utf8', flag:'r'});
-let readings = data.split("\n");"
-
-echo $START >>partOne.js
+STARTCODE="const fs = require('fs');\nconst data = fs.readFileSync('./input.txt',{encoding:'utf8', flag:'r'});\nlet readings = data.split("\n");"
+echo $STARTCODE >> partOne.js
+echo $STARTCODE >> partTwo.js
